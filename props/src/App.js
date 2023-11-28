@@ -1,12 +1,24 @@
 import './App.css';
+import Card from './Components/Card.jsx';
+import Pagination from './Components/Pagination.jsx';
+
 
 function App() {
+
+  let myObj= {
+    name: "Nidhi",
+    age: 26,
+    colors: ["red","green"]
+  }
+
+  let myArr=[1,2,3,4]
+
   return (
     <>
-    <div class="relative w-full bg-slate-500">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-    <div class="inline-flex items-center space-x-2">
-      <span>
+    <div class="relative w-full bg-slate-500 ">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center space-x-2">
+        <span>
         <svg
           width="30"
           height="30"
@@ -19,10 +31,10 @@ function App() {
             fill="white"
           ></path>
         </svg>
-      </span>
-      <span class="font-bold text-white">DevUI</span>
-    </div>
-    <div class="hidden lg:block">
+        </span>
+        <span class="font-bold text-white">DevUI</span>
+      </div>
+      <div class="hidden lg:block">
       <ul class="ml-12 inline-flex space-x-8">
         <li>
           <a
@@ -97,17 +109,17 @@ function App() {
           </a>
         </li>
       </ul>
-    </div>
-    <div class="flex grow justify-end">
-      <input
-        class="flex h-10 w-[250px] rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-white/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-        type="text"
-        placeholder="Search"
-      />
-    </div>
+      </div>
+      <div class="flex grow justify-end">
+        <input
+          class="flex h-10 w-[250px] rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-white/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+          type="text"
+          placeholder="Search"
+        />
+      </div>
     
-    <div class="ml-2 lg:hidden">
-      <svg
+      <div class="ml-2 lg:hidden">
+        <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -118,116 +130,49 @@ function App() {
         stroke-linecap="round"
         stroke-linejoin="round"
         class="h-6 w-6 cursor-pointer"
-      >
-        <line x1="4" y1="12" x2="20" y2="12"></line>
-        <line x1="4" y1="6" x2="20" y2="6"></line>
-        <line x1="4" y1="18" x2="20" y2="18"></line>
-      </svg>
-    </div>
-  </div>
-    </div>
-
-    <div className='flex flex-row min-h-screen justify-center items-center content-stretch bg-violet-100' >
-
-      <div className="relative h-[400px] w-[300px] rounded-md m-8">
-  <img
-    src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
-    alt="AirMax Pro"
-    className="z-0 h-full w-full rounded-md object-cover"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-  <div className="absolute bottom-4 left-4 text-left">
-    <h1 className="text-lg font-semibold text-white">Delba</h1>
-    <p className="mt-2 text-sm text-gray-300">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-      debitis?
-    </p>
-    <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-      View Profile →
-    </button>
-  </div>
+        >
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
       </div>
+    </div>
+    </div>
 
-      <div className="relative h-[400px] w-[300px] rounded-md m-8">
-  <img
-    src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
-    alt="AirMax Pro"
-    className="z-0 h-full w-full rounded-md object-cover"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-  <div className="absolute bottom-4 left-4 text-left">
-    <h1 className="text-lg font-semibold text-white">Delba</h1>
-    <p className="mt-2 text-sm text-gray-300">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-      debitis?
-    </p>
-    <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-      View Profile →
-    </button>
-  </div>
-      </div>
-  
-      <div class="w-[300px] rounded-md border m-8">
-  <img
-    src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
-    alt="Laptop"
-    class="h-[200px] w-full rounded-md object-cover"
-  />
-  <div class="p-4">
+
+
+    {/* <Card name="Nidhi" Object={myObj} Obj={myArr}/>  First card */}
+    <Card name="Nidhi" btnText="Click Me"/>  {/*First card*/}
+    <Card name="Prem" btnText="View Profile"/>  {/*Second card*/}
+    
+
+ {/* Amazon Card 8*/} 
+ <div class="w-[300px] rounded-md border m-8 bg-violet-100">
+      <img
+        src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
+        alt="Laptop"
+        class="h-[200px] w-full rounded-md object-cover"
+      />
+    <div class="p-4">
     <h1 class="text-lg font-semibold">About Macbook</h1>
-    <p class="mt-3 text-sm text-gray-600">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-      debitis?
-    </p>
-    <button
-      type="button"
-      class="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-    >
-      Read
-    </button>
-  </div>
-      </div>
-
+        <p class="mt-3 text-sm text-gray-600">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+          debitis?
+        </p>
+        <button
+          type="button"
+          class="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Read
+        </button>
     </div>
-
-    <div class="flex items-center justify-center m-8 p-3">
-  <a
-    href="#"
-    class="mx-1 cursor-not-allowed text-sm font-semibold text-gray-900"
-  >
-    ← Previous
-  </a>
-  <a
-    href="#"
-    class="mx-1 flex items-center rounded-md border border-gray-400 px-3 py-1 text-gray-900 hover:scale-105"
-  >
-    1
-  </a>
-  <a
-    href="#"
-    class="mx-1 flex items-center rounded-md border border-gray-400 px-3 py-1 text-gray-900 hover:scale-105"
-  >
-    2
-  </a>
-  <a
-    href="#"
-    class="mx-1 flex items-center rounded-md border border-gray-400 px-3 py-1 text-gray-900 hover:scale-105"
-  >
-    3
-  </a>
-  <a
-    href="#"
-    class="mx-1 flex items-center rounded-md border border-gray-400 px-3 py-1 text-gray-900 hover:scale-105"
-  >
-    4
-  </a>
-  <a href="#" class="mx-2 text-sm font-semibold text-gray-900">
-    Next →
-  </a>
-    </div>
+  </div> 
 
 
-    </>
+  <Pagination />
+
+  < />
+  
   );
 }
 
